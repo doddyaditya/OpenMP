@@ -1,25 +1,8 @@
-# Announcement
-
-Beberapa file yang harus ada dalam repositori tersebut diantaranya:
-* Direktori src yang berisi source code yang anda buat.
-* File output yang berisi hasil uji dijkstra algorithm pada data uji.
-* Makefile. Buatlah sehingga kompilasi program dapat dilakukan hanya dengan pemanggilan command ’make’ saja.
-* File README.md yang berisi:
-    * Petunjuk penggunaan program.
-    * Pembagian tugas. Sampaikan dalam list pengerjaan untuk setiap mahasiswa. Sebagai contoh: XXXX mengerjakan fungsi YYYY, ZZZZ, dan YYZZ.
-    * Laporan pengerjaan, dengan struktur laporan sesuai dengan deskripsi pada bagian sebelumnya.
-
-
 # I. Petunjuk penggunaan program
     gcc -g -Wall -o dijkstra dijkstra.c -fopenmp
     ./dijkstra [jumlah thread] [jumlah node]
     
-
-# II. Pembagian tugas
-*  13517008 mengerjakan fungsi chooseNode, dijkstra
-*  13517143 mengerjakan fungsi paralel dijkstra dengan pragma omp
-
-# III. Laporan pengerjaan
+# II. Laporan pengerjaan
 1.  Deskripsi solusi paralel<br/>
     Solusi yang digunakan adalah dengan menginisialisasi thread sejumlah thread\_count menggunakan #pragma omp parallel num\_threads(),
     setelah itu membagi task dijkstra untuk setiap node ke setiap thread yang sudah diinisialisasi dengan #pragma omp for sejumlah node.
